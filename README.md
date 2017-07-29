@@ -5,4 +5,4 @@ generate random style for text
 
 ```
 document.write(generateTextSyle("Hello World")):
-``
+```
