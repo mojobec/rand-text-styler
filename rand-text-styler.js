@@ -3,28 +3,16 @@ var fontStyles = [
     'italic',
     'oblique'
 ];
+
 var fontFamilies = [
  'serif',
  'sans-serif',
  'monospace',
  'cursive',
  'fantasy',
-    'system-ui'
+ 'system-ui'
 ];
 
-var fontSizes = [
-    'xx-small',
- 'x-small',
- 'small',
-'medium',
- 'large',
- 'x-large',
- 'xx-large',
-    'smaller',
-    'larger',
-    'length',
-    'percentage'
-];
 var  textDecorations = [
     'overline',
     'line-through',
@@ -38,27 +26,20 @@ var textAligns = [
     'left',
     'justify'
 ];
+
 var textTransforms = [
     'uppercase',
     'lowercase',
     'capitalize'
 ];
 
-function getSizes(sizeType) {
-    if(sizeType === 'length'){
+function getRandomSize() {
         return Math.random()*1000 + 'px';
-    }
-    else if(sizeType === 'percentage'){
-        return Math.random()*1000 + '%';
-    }
-    else {
-        return sizeType;
-    }
-
 }
+
 function generateTextSyle(text) {
     var fontStyle = 'font-style:' + getRandomItemFromArray(fontStyles) + ';';
-    var fontSize = 'font-size:' + getSizes(getRandomItemFromArray(fontSizes)) + ';';
+    var fontSize = 'font-size:' + getRandomSize() + ';';
     var textDecoration = 'text-decoration:' + getRandomItemFromArray(textDecorations) + ';';
     var fontFamily = 'font-family:' + getRandomItemFromArray(fontFamilies) + ';';
     var textAlign = 'text-align:' + getRandomItemFromArray(textAligns) + ';';
@@ -66,7 +47,7 @@ function generateTextSyle(text) {
     var color = 'color:' +  generateRandomColor() + ';';
 
     var style =  'style="' + color + textAlign + textDecoration + fontStyle + fontFamily + fontSize + textTransform + '"';
-    var divStart = "<div " + style + ">"
+    var divStart = "<div " + style + ">";
     var divEnd = "</div>";
     return divStart + text + divEnd;
 }
