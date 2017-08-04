@@ -6,5 +6,5 @@ Add the rand-text-styler.js script to your html file
 
 ## Usage example
 ```
-document.write(generateTextSyle("Hello World")):
+document.write(generateTextStyle("Hello World")):
 ```
