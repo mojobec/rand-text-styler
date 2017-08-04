@@ -37,7 +37,7 @@ function getRandomSize() {
         return Math.random()*1000 + 'px';
 }
 
-function generateTextSyle(text) {
+function generateTextStyle(text) {
     var fontStyle = 'font-style:' + getRandomItemFromArray(fontStyles) + ';';
     var fontSize = 'font-size:' + getRandomSize() + ';';
     var textDecoration = 'text-decoration:' + getRandomItemFromArray(textDecorations) + ';';
